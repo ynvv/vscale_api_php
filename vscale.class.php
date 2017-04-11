@@ -6,14 +6,12 @@ class Vscale {
 
 	private $_token;
 	private $_api;
-	private $_json;
 
 
-	function __construct($token, $json)
+	function __construct($token)
 	{
 		$this->_token = $token;
 		$this->_api = 'https://api.vscale.io/v1/';
-		$this->_json = $json;
 	}
 
 
@@ -39,7 +37,6 @@ class Vscale {
 		    default:
 		       $data = Unirest\Request::get($this->_api.$method, ['X-Token' => $this->_token], $body);
 		}
-		var_dump($data->headers);
 		if ($data->code === 403) {
 			return ['type' => 'error', 'info' => 'invalid token'];
 			exit;
