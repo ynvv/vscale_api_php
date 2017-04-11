@@ -44,7 +44,7 @@ class Vscale {
 			return ['type' => 'error', 'info' => 'invalid token'];
 			exit;
 		}
-		if ($data->headers['VSCALE-ERROR-MESSAGE1'] == 'None') {
+		if ($data->headers['VSCALE-ERROR-MESSAGE'] == 'None') {
 			return ['type' => 'error', 'info' => $data->headers['VSCALE-ERROR-MESSAGE']];
 			exit;
 		} else {
