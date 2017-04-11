@@ -308,7 +308,7 @@ class Vscale {
 		return $this->sendRequest('domains/ptr', ['ip' => $ip, 'content' => $content], 'post');
 	}
 
-	public function getPTRrecords($value='')
+	public function getPTRrecords()
 	{
 		return $this->sendRequest('domains/ptr');
 	}
