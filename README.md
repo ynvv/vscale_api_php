@@ -20,12 +20,6 @@ echo $balance['bonus'];
 
 # Методы
 
-```php
-getAccountDetails() - получение данных об аккаунте
-getScalets() - получение списка серверов
-createScalet($system, $plan, $name, $password, $location) - создание 
-
-```
 Метод | Описание
 ------------ | -------------
 getAccountDetails() | Информация об аккаунте
